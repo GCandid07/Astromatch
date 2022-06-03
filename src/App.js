@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react';
+import { GlobalStyle } from './components/Style.js'
+import { Container, Screen } from './components/Style'
+import InitialScreen from './pages/InitialScreen'
+import MatchesScreen from './pages/MatchesScreen'
 
 function App() {
+  const [changeScreen, setChangeScreen] = useState('Initial')
+
+  const screen = (param) => {
+    setChangeScreen(param)
+  } 
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <GlobalStyle />
+      <Screen>
+        {changeScreen === "Initial" ? <InitialScreen Chat={screen} />: <MatchesScreen Matches={screen} />}
+      </Screen>
+    </Container>
   );
 }
 
