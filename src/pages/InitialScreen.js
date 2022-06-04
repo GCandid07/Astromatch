@@ -8,7 +8,7 @@ import { getProfileToChoose, choosePerson, clearMatches } from "../services/ApiR
 function InitialScreen (props) {
 
   const [infos, setInfos] = useState([])
-  const [choice, setChoice] = useState(undefined)
+  const [choice, setChoice] = useState(false)
   const [loading, setLoading] = useState(false);
   const [isMatch, setIsMatch] = useState();
 
