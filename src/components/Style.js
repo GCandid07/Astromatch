@@ -79,7 +79,7 @@ export const ContainerMatches = styled.div`
 export const Card = styled.div`
   border-radius: .5em;
   width: 90%;
-  height: 65%;
+  height: 60%;
   position: relative;
   box-shadow: 1px 1px 10px #CCC;
   animation: ${CardFlip} 0.6s linear both;
@@ -284,4 +284,12 @@ export const Reset = styled(ContainerMatches)`
     color: #000;
     text-shadow: 2px 2px 2px #CCC;
   }
+`;
+
+export const FlashMessage = styled.p`
+  width: 90%;
+  padding: 3vh 0;
+  background-color: #98fb98;
+  text-align: center;
+  border-radius: 5px;
 `;
