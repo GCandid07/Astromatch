@@ -8,7 +8,7 @@
 - [x] Screens Workflow
 
 ### Surge Link 
-- [x] [Link do Surge](https://resonant-thumb.surge.sh/) 🚀 
+- [x] [Surge Link](https://swift-jail.surge.sh/) 🚀 
 
 ### Runs the app
 
