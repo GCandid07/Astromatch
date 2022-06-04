@@ -8,7 +8,7 @@
 - [x] Screens Workflow
 
 ### Surge Link 
-- [x] [Surge Link](https://swift-jail.surge.sh/) 🚀 
+- [x] [Surge Link](https://worried-slope.surge.sh/) 🚀 
 
 ### Runs the app
 
