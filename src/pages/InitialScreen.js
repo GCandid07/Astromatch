@@ -8,7 +8,6 @@ import { getProfileToChoose, choosePerson, clearMatches } from "../services/ApiR
 function InitialScreen (props) {
 
   const [infos, setInfos] = useState([])
-  const [choice, setChoice] = useState(false)
   const [loading, setLoading] = useState(false);
   const [isMatch, setIsMatch] = useState();
 
@@ -18,8 +17,7 @@ function InitialScreen (props) {
 
   const buttons = (btnChoice) => {
     if (btnChoice !== "reset") {
-      setChoice(btnChoice);
-      handleChoosePerson();
+      handleChoosePerson(btnChoice);
     } else {
       handleClearMatches();
     }
@@ -39,7 +37,7 @@ function InitialScreen (props) {
     setInfos(Object.values(response))
     setLoading(false);
   }
-  const handleChoosePerson = async () => {
+  const handleChoosePerson = async (choice) => {
     const id = infos.map(id => id.id)
     const response = await choosePerson(id.join(), choice)
     setIsMatch(response.isMatch);
